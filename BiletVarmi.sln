@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiletVarmi", "BiletVarmi\BiletVarmi.csproj", "{A5C5ED10-E0D3-4BA5-8036-B2E0E6F1BF6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTriggerApi", "TestTriggerApi\TestTriggerApi.csproj", "{80D8B475-066C-4DC4-B037-C4260606E7AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A5C5ED10-E0D3-4BA5-8036-B2E0E6F1BF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5C5ED10-E0D3-4BA5-8036-B2E0E6F1BF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5C5ED10-E0D3-4BA5-8036-B2E0E6F1BF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D8B475-066C-4DC4-B037-C4260606E7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D8B475-066C-4DC4-B037-C4260606E7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D8B475-066C-4DC4-B037-C4260606E7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D8B475-066C-4DC4-B037-C4260606E7AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
