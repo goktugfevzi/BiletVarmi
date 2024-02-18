@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailSend.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="BiletKontrol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

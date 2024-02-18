@@ -12,54 +12,48 @@ using System.Threading;
 namespace BiletVarmi
 {
     [TestClass]
-    public class UnitTest1
+    public class BiletKontrol
     {
         [TestMethod]
-        public void TestMethod1(IWebDriver driver, string fromTrain,string toTrain,string departureDate, string email)
+        public void BiletKontroluBaslat(IWebDriver driver, string fromTrain, string toTrain, string departureDate, string email, string startTime, string endTime)
         {
+
+
             while (true)
             {
                 try
                 {
+
                     driver.FindElement(By.Id("nereden")).SendKeys(fromTrain);
                     driver.FindElement(By.Id("nereye")).SendKeys(toTrain);
                     driver.FindElement(By.Id("trCalGid_input")).Clear();
                     driver.FindElement(By.Id("trCalGid_input")).SendKeys(departureDate);
                     driver.FindElement(By.Id("btnSeferSorgula")).Click();
-
                     Thread.Sleep(3000);
 
-                    while (true)
-                    {
-                        try
-                        {
+                    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+                    wait.Until(d => d.FindElement(By.XPath("//*[@id=\"mainTabView:gidisSeferTablosu_data\"]")));
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("ilk sayfa açlışındaki Try Test içindeki" + ex);
+                    break;
+                }
+            }
 
-                            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-                            wait.Until(d => d.FindElement(By.XPath("//*[@id=\"mainTabView:gidisSeferTablosu_data\"]")));
-                            break;
-                        }
-                        catch (Exception e)
-                        {
-                            driver.FindElement(By.Id("nereden")).SendKeys("Eskişehir");
-                            driver.FindElement(By.Id("nereye")).SendKeys("Ankara Gar");
-                            driver.FindElement(By.Id("trCalGid_input")).Clear();
-                            driver.FindElement(By.Id("trCalGid_input")).SendKeys("24.02.2024");
-                            driver.FindElement(By.Id("btnSeferSorgula")).Click();
-
-                        }
-                    }
-
-                    // <tr> elementlerini döngüye alma
-                    IList<IWebElement> satirlar = driver.FindElements(By.CssSelector("#mainTabView\\:gidisSeferTablosu_data > tr"));
+            IList<IWebElement> satirlar = driver.FindElements(By.CssSelector("#mainTabView\\:gidisSeferTablosu_data > tr"));
+            while (true)
+            {
+                try
+                {
                     foreach (IWebElement satir in satirlar)
                     {
-                        // Süre kontrolü
                         string sureStr = satir.FindElement(By.XPath("td[1]/span")).Text;
                         TimeSpan sure = TimeSpan.Parse(sureStr);
 
-                        if (sure < TimeSpan.Parse("23:40"))
+                        if (sure > TimeSpan.Parse(startTime) && sure < TimeSpan.Parse(endTime))
                         {
-                            // Vagon tipini alma
                             string vagonTipi = satir.FindElement(By.XPath("td[5]/div/label")).Text;
 
                             if (vagonTipi != "2+2 Pulman (Ekonomi) (2 Engelli koltuğu)" &&
@@ -72,11 +66,12 @@ namespace BiletVarmi
                         }
                     }
 
-                    Thread.Sleep(TimeSpan.FromMinutes(3));
+                    Thread.Sleep(TimeSpan.FromMinutes(1));
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Hata: " + ex.Message);
+                    Console.WriteLine("Ana Try Test içindeki" + ex);
+                    break;
                 }
             }
         }

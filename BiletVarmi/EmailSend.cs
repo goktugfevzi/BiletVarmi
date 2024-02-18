@@ -10,8 +10,8 @@ namespace BiletVarmi
 {
     public static class EmailSend
     {
-        
-        public static void email_send(string message,string email)
+
+        public static void email_send(string message, string email)
         {
             using (MailMessage mail = new MailMessage())
             {
@@ -32,5 +32,7 @@ namespace BiletVarmi
         }
     }
 }
+
+
 
 
