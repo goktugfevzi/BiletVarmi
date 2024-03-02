@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -11,10 +10,8 @@ using System.Threading;
 
 namespace BiletVarmi
 {
-    [TestClass]
     public class BiletKontrol
     {
-        [TestMethod]
         public void BiletKontroluBaslat(IWebDriver driver, string fromTrain, string toTrain, string departureDate, string email, string startTime, string endTime)
         {
 
@@ -42,11 +39,11 @@ namespace BiletVarmi
                 }
             }
 
-            IList<IWebElement> satirlar = driver.FindElements(By.CssSelector("#mainTabView\\:gidisSeferTablosu_data > tr"));
             while (true)
             {
                 try
                 {
+                    IList<IWebElement> satirlar = driver.FindElements(By.CssSelector("#mainTabView\\:gidisSeferTablosu_data > tr"));
                     foreach (IWebElement satir in satirlar)
                     {
                         string sureStr = satir.FindElement(By.XPath("td[1]/span")).Text;
@@ -61,12 +58,17 @@ namespace BiletVarmi
                                 vagonTipi != "2+2 Pulman (Ekonomi) (0 )")
                             {
                                 string message = sureStr + " - " + vagonTipi + " " + "https://ebilet.tcddtasimacilik.gov.tr/view/eybis/tnmGenel/tcddWebContent.jsf";
-                                EmailSend.email_send(message, email);
+                                EmailSend.emailSend(message, email);
                             }
                         }
                     }
 
+
                     Thread.Sleep(TimeSpan.FromMinutes(1));
+                    driver.FindElement(By.Id("mainTabView:btnOncekiGunGidis")).Click();
+                    Thread.Sleep(3000);
+                    driver.FindElement(By.Id("mainTabView:btnSonrakiGunGidis")).Click();
+                    Thread.Sleep(3000);
                 }
                 catch (Exception ex)
                 {

@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using TestTriggerApi.Model;
+using Project1.Model;
+using Project1.Model;
 
 namespace TestTriggerApi.Controllers
 {
@@ -12,10 +13,10 @@ namespace TestTriggerApi.Controllers
     public class SystemRunnerController : ControllerBase
     {
         IWebDriver driver;
-        private readonly BiletKontrol _test;
-        public SystemRunnerController(BiletKontrol test)
+        private readonly BiletKontrol _kontrol;
+        public SystemRunnerController(BiletKontrol kontrol)
         {
-            _test = test;
+            _kontrol = kontrol;
         }
 
 
@@ -31,7 +32,7 @@ namespace TestTriggerApi.Controllers
                     {
                         Url = "https://ebilet.tcddtasimacilik.gov.tr/view/eybis/tnmGenel/tcddWebContent.jsf"
                     };
-                    _test.BiletKontroluBaslat(driver, data.fromTrain, data.toTrain, data.departureDate, data.email, data.startTime, data.endTime);
+                    _kontrol.BiletKontroluBaslat(driver, data.fromTrain, data.toTrain, data.departureDate, data.email, data.startTime, data.endTime);
                     break;
                 }
                 catch (Exception ex)

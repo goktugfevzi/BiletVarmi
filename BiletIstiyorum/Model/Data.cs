@@ -1,4 +1,4 @@
-﻿namespace TestTriggerApi.Model
+﻿namespace Project1.Model
 {
     public class Data
     {
