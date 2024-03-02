@@ -7,6 +7,9 @@ Artık değil çünkü sizin yerinize her dakika bilet kontrolü yapıp herkeste
 önce bileti görüp alabileceksiniz.
 Ayrıca uygulamayı TCDD Yetkililerine söylemezseniz sevinirim :)
 
+
+Dilerseniz [Portfolyo websitem](https://goktugfevziozcelik.com) içerisinde footer kısmındaki Bilet Varmı? butonuna basıp uygulamayı kullanabilirsiniz. Tabii ki TCDD hala ban atmadıysa.
+
 ## Tecnologies
 
 - Backend: .NET Core 6, Selenium
