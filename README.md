@@ -2,13 +2,13 @@
 
 ## Description
 
-Tren bileti bulmak bir zulum değil mi?
-Artık değil çünkü sizin yerinize her dakika bilet kontrolü yapıp herkesten 
-önce bileti görüp alabileceksiniz.
-Ayrıca uygulamayı TCDD Yetkililerine söylemezseniz sevinirim :)
+<p>Tren bileti bulmak bir zulum değil mi?  </p>
+<p>Artık değil çünkü sizin yerinize her dakika bilet kontrolü yapıp herkesten   </p>
+<p>önce bileti görüp alabileceksiniz.  </p>
 
+Dilerseniz [Portfolyo websitem](https://goktugfevziozcelik.com) içerisinde footer kısmındaki Bilet Varmı? butonuna basıp uygulamayı kullanabilirsiniz. Tabii ki TCDD hala ban atmadıysa.  
 
-Dilerseniz [Portfolyo websitem](https://goktugfevziozcelik.com) içerisinde footer kısmındaki Bilet Varmı? butonuna basıp uygulamayı kullanabilirsiniz. Tabii ki TCDD hala ban atmadıysa.
+<p>Dipnot: TCDD Yetkililerine Söylemeyiniz.  </p>
 
 ## Tecnologies
 
@@ -30,7 +30,7 @@ Dilerseniz [Portfolyo websitem](https://goktugfevziozcelik.com) içerisinde foot
 
 
 ```sh
-git clone https://github.com/goktugfevzi/WhatsWebsite.git
+git clone https://github.com/goktugfevzi/BiletVarmi.git
 ```
 
 EmailSend.cs içerisine Emailinizi ve Uygulama şifrenizi yazmanız gerekiyor. 
@@ -38,6 +38,9 @@ EmailSend.cs içerisine Emailinizi ve Uygulama şifrenizi yazmanız gerekiyor.
 Uygulama şifresi daha önce almadıysanız şu dökümanı inceleminizi öneririm.
 https://support.google.com/mail/answer/185833?hl=tr
 
+Görüntüdeki gibi email ve passwordunuzu yazmalısınız.
+
+![image](https://github.com/goktugfevzi/BiletVarmi/assets/64567701/0a4d98fd-c3ea-4738-9cc9-d3fb7200877f)
 
 Sonrasında tek yapmanız gereken projeyi çalıştırmak.
 
