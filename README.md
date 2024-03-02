@@ -3,8 +3,7 @@
 ## Description
 
 <p>Tren bileti bulmak bir zulum değil mi?  </p>
-<p>Artık değil çünkü sizin yerinize her dakika bilet kontrolü yapıp herkesten   </p>
-<p>önce bileti görüp alabileceksiniz.  </p>
+<p>Artık değil çünkü sizin yerinize her dakika bilet kontrolü yapıp herkesten önce bileti görüp alabileceksiniz.</p>
 
 Dilerseniz [Portfolyo websitem](https://goktugfevziozcelik.com) içerisinde footer kısmındaki Bilet Varmı? butonuna basıp uygulamayı kullanabilirsiniz. Tabii ki TCDD hala ban atmadıysa.  
 
