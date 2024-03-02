@@ -17,6 +17,7 @@ Ayrıca uygulamayı TCDD Yetkililerine söylemezseniz sevinirim :)
 
 <div align="center">
 
+![BiletVarmiTrailer](https://github.com/goktugfevzi/BiletVarmi/assets/64567701/434c1f0c-8966-4d4c-a5c5-e8b3921e365e)
 
 </div>
 
